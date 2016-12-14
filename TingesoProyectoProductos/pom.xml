@@ -217,7 +217,13 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>${version.wildfly.maven.plugin}</version>
+                <configuration>
+                    <name>TingesoProyectoProductos.war</name>
+                    <hostname>127.0.0.1</hostname>
+                    <username>admin</username>
+                    <password>dido123,.-</password>
+                    <port>9990</port>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
@@ -230,7 +236,18 @@
 
     <profiles>
         <profile>
-            <!-- The default profile skips all tests, though you can tune it to run 
+    <!-- The default profile skips all te                    <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <configuration>
+                    <name>TingesoProyectoProductos.war</name>
+                    <hostname>127.0.0.1</hostname>
+                    <username>admin</username>
+                    <password>dido123,.-</password>
+                    <port>9990</port>
+                </configuration>
+            </plugin>
+sts, though you can tune it to run 
                 just unit tests based on a custom pattern -->
             <!-- Seperate profiles are provided for running all tests, including Arquillian 
                 tests that execute in the specified container -->
@@ -245,17 +262,6 @@
                         <version>${version.surefire.plugin}</version>
                         <configuration>
                             <skip>true</skip>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.wildfly.plugins</groupId>
-                        <artifactId>wildfly-maven-plugin</artifactId>
-                        <configuration>
-                            <name>TingesoProyectoProductos.war</name>
-                            <hostname>127.0.0.1</hostname>
-                            <username>admin</username>
-                            <password>dido123,.-</password>
-                            <port>9990</port>
                         </configuration>
                     </plugin>
                 </plugins>
