@@ -220,28 +220,12 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly.maven.plugin}</version>
             </plugin>
-
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>7.1.1.Final</version>
-                <configuration>
-                    <port>9990</port>
-                    <username>admin</username>
-                    <password>dido123,.-</password>
-                    <name>Productos</name>
-                    <filename>TingesoProyectoProductos.war</filename>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>deploy-jar</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
+
         </plugins>
     </build>
 
