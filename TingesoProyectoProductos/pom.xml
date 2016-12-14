@@ -217,6 +217,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${version.wildfly.maven.plugin}</version>
                 <configuration>
                     <name>TingesoProyectoProductos.war</name>
                     <hostname>127.0.0.1</hostname>
@@ -239,7 +240,8 @@
     <!-- The default profile skips all te                    <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <configuration>
+
+    <configuration>
                     <name>TingesoProyectoProductos.war</name>
                     <hostname>127.0.0.1</hostname>
                     <username>admin</username>
