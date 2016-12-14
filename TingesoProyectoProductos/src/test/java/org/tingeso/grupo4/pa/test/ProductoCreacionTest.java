@@ -42,6 +42,6 @@ public class ProductoCreacionTest {
         newProducto.setCantidad(23);
         productoCreacion.crear(newProducto);
         assertNotNull(newProducto.getId());
-        log.info(newProducto.getNombre() + " was persisted with id " + newProducto.getId());
+        log.info(newProducto.getNombre() + " guardado con id " + newProducto.getId());
     }
 }
