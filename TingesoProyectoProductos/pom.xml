@@ -194,7 +194,6 @@
             <artifactId>arquillian-protocol-servlet</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -246,6 +245,17 @@
                         <version>${version.surefire.plugin}</version>
                         <configuration>
                             <skip>true</skip>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
+                        <configuration>
+                            <name>TingesoProyectoProductos.war</name>
+                            <hostname>127.0.0.1</hostname>
+                            <username>admin</username>
+                            <password>dido123,.-</password>
+                            <port>9990</port>
                         </configuration>
                     </plugin>
                 </plugins>
