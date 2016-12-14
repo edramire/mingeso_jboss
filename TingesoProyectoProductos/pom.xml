@@ -315,7 +315,12 @@
                             <include>**/*</include>
                         </includes>
                     </resource>
-                </resources>
+                    <resource>
+                        <directory>src/test</directory>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                    </resource>                </resources>
                 <plugins>
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
