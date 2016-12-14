@@ -227,12 +227,11 @@
                 <version>7.1.1.Final</version>
                 <configuration>
                     <hostname>127.0.0.1</hostname>
-                    <port>${deploy.jboss.port}</port>
-                    <username>${deploy.jboss.user}</username>
-                    <password>${deploy.jboss.password}</password>
-                    <name>${backend.deployment-name}</name>
-                    <filename>${project.build.finalName}.war</filename>
-                    <skip>${skipDeployment}</skip>
+                    <port>8080</port>
+                    <username>admin</username>
+                    <password>dido123,.-</password>
+                    <name>Productos</name>
+                    <filename>TingesoProyectoProductos.war</filename>
                 </configuration>
                 <executions>
                     <execution>
