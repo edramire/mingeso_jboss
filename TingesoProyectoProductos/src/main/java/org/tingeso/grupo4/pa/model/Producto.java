@@ -29,9 +29,34 @@ public class Producto implements Serializable {
 	
     @NotNull
     @Min(0)
-    @Max(10000)
-    private int cantidad;
+    @Max(10000000)
+    private long precio;
 	
+    @NotNull
+    @NotEmpty
+    private String ciudad;
+    
+    @NotNull
+    @NotEmpty
+    private String telefono;
+    
+    
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
 	public int getId() {
 		return this.id;
 	}
@@ -48,12 +73,12 @@ public class Producto implements Serializable {
 		this.nombre = nombre;
 	}
 	
-	public int getCantidad() {
-		return this.cantidad;
+	public long getPrecio() {
+		return this.precio;
 	}
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setPrecio(long precio) {
+		this.precio = precio;
 	}
    
 }

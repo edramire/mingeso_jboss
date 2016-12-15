@@ -6,7 +6,7 @@
     xmlns:h="http://java.sun.com/jsf/html"
     template="/WEB-INF/templates/default.xhtml">
     <ui:define name="content">
-        <h1>Bienvenido al inventario de productos!</h1>
+        <h1>Inventario de productos!</h1>
 
         <div>
             <p>En esta sección podrá crear y editar productos</p>
@@ -20,9 +20,18 @@
                 <h:inputText id="nombre" value="#{newProducto.nombre}" />
                 <h:message for="nombre" errorClass="invalid" />
 
-                <h:outputLabel for="cantidad" value="Cantidad:" />
-                <h:inputText id="cantidad" value="#{newProducto.cantidad}" />
-                <h:message for="cantidad" errorClass="invalid" />
+                <h:outputLabel for="precio" value="Precio:" />
+                <h:inputText id="precio" value="#{newProducto.precio}" />
+                <h:message for="precio" errorClass="invalid" />
+                
+                <h:outputLabel for="ciudad" value="Ciudad:" />
+                <h:inputText id="ciudad" value="#{newProducto.ciudad}" />
+                <h:message for="ciudad" errorClass="invalid" />
+
+                <h:outputLabel for="telefono" value="Telefono:" />
+                <h:inputText id="telefono" value="#{newProducto.telefono}" />
+                <h:message for="telefono" errorClass="invalid" />
+                
             </h:panelGrid>
 
             <p>
@@ -52,8 +61,16 @@
                 #{_producto.nombre}
             </h:column>
             <h:column>
-                <f:facet name="header">Cantidad</f:facet>
-                #{_producto.cantidad}
+                <f:facet name="header">Precio</f:facet>
+                #{_producto.precio}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Ciudad</f:facet>
+                #{_producto.ciudad}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Telefono</f:facet>
+                #{_producto.telefono}
             </h:column>
             <h:column>
                 <f:facet name="header">REST URL</f:facet>

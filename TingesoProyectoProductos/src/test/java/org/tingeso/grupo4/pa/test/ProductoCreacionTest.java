@@ -7,17 +7,19 @@ import java.util.logging.Logger;
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.tingeso.grupo4.pa.model.Producto;
 import org.tingeso.grupo4.pa.service.ProductoCreacion;
 import org.tingeso.grupo4.pa.util.Resources;
 
+@RunWith(Arquillian.class)
 public class ProductoCreacionTest {
-
 	
     @Deployment
     public static Archive<?> createTestArchive() {
@@ -39,7 +41,8 @@ public class ProductoCreacionTest {
     public void testCreacion() throws Exception {
         Producto newProducto = new Producto();
         newProducto.setNombre("Producto numero 1");
-        newProducto.setCantidad(23);
+        newProducto.setPrecio(23);
+        log.info("holi");
         productoCreacion.crear(newProducto);
         assertNotNull(newProducto.getId());
         log.info(newProducto.getNombre() + " guardado con id " + newProducto.getId());
