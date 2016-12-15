@@ -25,7 +25,7 @@
          <property name="executionType">MANAGED</property>
       </protocol>
       <configuration>
-		<property name="jbossHome">${jboss.home}</property>
+		<property name="jbossHome">${arquillian.jboss_home}</property>
 		<property name="allowConnectingToRunningServer">true</property>
       </configuration>
    </container>
